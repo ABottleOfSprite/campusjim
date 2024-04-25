@@ -1,0 +1,156 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: black;
+  color: white;
+  padding-bottom: 500px;
+}
+
+.header__nav {
+  filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0));
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-block: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  
+  
+  
+  .links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+
+    
+
+    a {
+      text-decoration: none;
+      color: white;
+      
+      &:hover {
+        color: rgb(202, 9, 9);
+      }
+    }
+  }
+
+}
+
+.logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  
+
+  img {
+    filter: invert(1);
+    width: 3rem;
+    transform: scaleX(-1);
+    aspect-ratio: 1;
+    cursor: pointer;
+  }
+
+  .logo-type {
+    font-size: clamp(1.5rem, 2rem, 3rem);
+    cursor: pointer;
+  }
+}
+
+
+.hero {
+  position: relative;
+  
+  width: 100%;
+  height: 100vh;
+
+  .hero__bg {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-position: 0 -180vh;
+      overflow: hidden;
+      object-fit: cover;
+      mask-image: linear-gradient(100deg, red, transparent);
+
+    }
+  }
+}
+
+
+.hero-info {
+  position: absolute;
+  top: 10rem;
+  right: 5vw;
+}
+.hero__text{
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 6rem;
+  width: 10ch;
+  font-weight: 900;
+}
+
+.hero__button {
+  position: absolute;
+  z-index: 10000;
+  font-family: inherit;
+  width: 15rem;
+  height: 3rem;
+  background-color: rgba(255, 255, 255, 0.089);
+  border-radius: 3rem;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.line {
+  margin-block: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line__text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 5rem;
+  line-height: 1.3;
+  width: 24ch;
+  text-align: center;
+}
+
+strong {
+  background-image: url("/campusjim/images/background-3.jpg");
+  filter: hue-rotate(0deg) saturate(10);
+  background-size: cover;
+  background-position: 0vw -230vh;
+  background-clip: text;
+  color: transparent;
+  animation: parallaxAnimation 60s ease-in-out infinite alternate; /* Adjust animation duration */
+
+}
+
+@keyframes parallaxAnimation {
+  0% {
+    filter: hue-rotate(0deg) saturate(10);
+    background-position: 0vw -230vh;
+  }
+  100% {
+    filter: hue-rotate(360deg) saturate(10);
+    background-position: 300vw 100vh;
+  }
+}
